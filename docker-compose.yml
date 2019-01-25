@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: jupyter
+    ports:
+      - 8888:8888
+    volumes:
+      - ./work/:/home/jovyan/work
+  mariaDB:
+    image: mariadb
+    container_name:  cc104.rds.local
+    environment: 
+      MYSQL_ROOT_PASSWORD: iii
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+      
