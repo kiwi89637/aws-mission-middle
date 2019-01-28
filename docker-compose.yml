@@ -7,9 +7,10 @@ services:
       dockerfile: dockerfile
     container_name: jupyter
     ports:
-      - 8888:8888
+      - 8889:8888
     volumes:
       - ./work/:/home/jovyan/work
+    command: start.sh jupyter notebook --NotebookApp.token=''
   mariaDB:
     image: mariadb
     container_name:  cc104.rds.local

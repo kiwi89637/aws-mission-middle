@@ -1,2 +1,2 @@
 FROM jupyter/base-notebook
-!pip install PyMySQL
+RUN pip install pymysql
