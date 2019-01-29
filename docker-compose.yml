@@ -20,5 +20,9 @@ services:
       - ./mysql/data:/var/lib/mysql
     ports:
       - 3306:3306
-
-      
+  dynamoDB:
+    image: amazon/dynamodb-local
+    container_name: cc104.dynamodb.local
+    ports:
+      - 8000:8000
+           
